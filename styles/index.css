@@ -1,5 +1,6 @@
 body{
     background-color: black;
+    /* background-color: rgb(27, 27, 27); */
     color: white;
     width: 58em;
     margin: auto;
@@ -53,7 +54,7 @@ main{
     width: 300px;
     margin: auto;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
         
 }
 #profile-contacts a{
@@ -72,10 +73,14 @@ main{
 }
 #profile nav{
     background-color: darkcyan;
-    border-radius: 0 0px 10px 10px; 
+    /* background-color: black;
+        background-color: rgb(27, 27, 27); */
+
+    border-radius: 0 0 10px 10px; 
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 50px;
 }
 #profile nav a{
     flex: 1 1 25%;
