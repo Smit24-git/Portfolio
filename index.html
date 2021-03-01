@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <title>Smit Shah - Portfolio</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            width: 58em;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        main{
+            text-align: center;
+        }
+        #profile{
+            background-color: #f2f2f2cc;
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+            margin-top: 10%;
+            height: calc(100% - 75px);
+        }
+        #profile-body{
+            position: relative;
+            top: -75px;
+            height: calc(100% - 75px);
+        }
+        #profile-body h1{
+            text-transform: uppercase;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 1px 1px 1px rosybrown;
+            letter-spacing: 2pt;
+            word-spacing: 5pt;
+            color: rgb(12, 92, 92);
+            margin-bottom: 0;
+        }
+        #profile-body p{
+            text-transform: uppercase;
+
+            font-family: 'PT Mono', monospace;
+            color: black;
+            margin: 5px;
+        }
+        .first-letter{
+            font-size: 150%;
+            color: red;
+        }
+        #profile-image{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid black;    
+        }
+        #profile-contacts{
+            display: flex;
+            flex-direction: row;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+                
+        }
+        #profile-contacts a{
+            flex: 0 0 100px;
+            border-radius: 10px;
+        }
+        #profile-contacts a:hover {
+            background-color: darkcyan;
+
+        }
+        
+        #profile-contacts a img{
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+        #profile nav{
+            background-color: darkcyan;
+            border-radius: 0 0px 10px 10px; 
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        #profile nav a{
+            flex: 1 1 25%;
+            text-decoration: none;
+            color: white;
+            padding: 10px 0;
+            border-right: 1px solid black;
+        }
+        #profile nav a:hover{
+            background-color:  rgba(197, 197, 211, 0.699);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section id="profile">
+            <div id="profile-body">
+                <figure id="profile-image-figure">
+                    <img id="profile-image" src="media/profile.jpg" />
+                </figure>
+                <h1><span class="first-letter">S</span>mit <span class="first-letter">S</span>hah</h1>
+                <p>Computer Application Developer</p>
+                <section id="profile-contacts">
+                    <a href=""><img src="media/email.png"/></a> 
+                    <a href=""><img src="media/linkedin.png"/></a>  
+                    <a href=""><img src="media/github.png"/></a>
+                </section>
+            </div>
+            <nav>
+                <a href="">About</a>
+                <a href="">Work Experience</a>
+                <a href="">Projects</a>
+                <a href="">Contact ME</a>
+            </nav>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
