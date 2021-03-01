@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    /* background-color:rgba(255, 255, 255, 0.658); */
+    background-color: darkcyan;
+    overflow: auto;
+    position: sticky;
+    box-shadow: 0px 0px 10px rgb(245, 187, 187);
+
+}
+header h1{
+    display: inline-block;
+    margin: 5px 10px;
+}
+header nav{
+    /* display: flex; */
+    flex-direction: row;
+    float: right;
+    margin: 5px 10px;
+}
+header nav a{
+    display: inline-block;
+    flex: 1 1 20%;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+}
+header nav a:hover{
+    background-color:  rgba(197, 197, 211, 0.699);
+    color: black;
+}
+#active{
+    background-color:  rgba(197, 197, 211, 0.699);
+    color: black;
+}
+.first-letter{
+    font-size: 110%;
+    color: red;
+    
+}
+header h1{
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px 1px rosybrown;
+    letter-spacing: 2pt;
+    word-spacing: 5pt;
+    color: rgb(12, 61, 61);
+    /* color: rgba(22, 6, 6, 0.747); */
+    margin-bottom: 0;
+}
