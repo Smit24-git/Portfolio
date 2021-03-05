@@ -1,0 +1,105 @@
+#aboutus article{
+    background-color: rgba(255, 255, 255, 0.158);
+    width: 80%;
+    margin: auto;
+    padding: .3em 1.5em;
+    border-radius: 5px;
+}
+#aboutus p{
+    line-height: 1.5;
+    letter-spacing: 1pt;
+    font-family: serif;
+}
+#eduback > header > h2{
+    text-align: center;
+    
+}
+.underline{
+    text-decoration: underline;
+}
+section#eduback h2{
+    letter-spacing: 1pt;
+    word-spacing: 5pt;
+    text-transform: uppercase;
+}
+
+.timeline article{
+    width: 40vw;
+    background-color: rgba(255, 255, 255, 0.158);
+    /* width: 60%; */
+    margin: 50px auto;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.edu .date{
+    flex: 0 0 100px;
+}
+.edu .body{
+    padding-left: 20px;
+}
+.edu .body header h4{
+    margin: 0;
+    letter-spacing: 1pt;
+    word-spacing: 3pt;
+    text-transform: uppercase;
+}
+.edu .date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 2px solid olive;
+}
+.edu .date p{
+    margin: 0;
+    text-align: center;
+}
+.edu ul{
+    display: none;
+    transition: display 1s linear;
+    
+}
+.edu ul li{
+    line-height: 1.5;
+}
+.edu .gpa{
+    position: absolute;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    background-color: green;
+    bottom: 0;
+    left: 40%;
+    right: 40%;
+    padding: 5px 20px;
+    border-radius: 10px 10px 0 0;
+}
+.edu input[type="button"]{
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    right: 10px;
+    padding: 5px 20px;
+    
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    background: url("../media/down.png");
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+
+}
+input[type="button"]:hover{
+    cursor: pointer;
+}
+.btn-toggle {
+    transform:rotate(-180deg);
+    transition-duration: 1s;
+    -webkit-transform:rotate(-180deg);
+    -webkit-transition-duration: 1s;
+}

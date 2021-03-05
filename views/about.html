@@ -6,33 +6,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
     <link href="../styles/layout.css" rel="stylesheet" />
-    
+    <link href="../styles/about.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Smit Shah - About</title>
-    <style>
-        article{
-            background-color: rgba(255, 255, 255, 0.158);
-            width: 80%;
-            margin: auto;
-            padding: .3em 1.5em;
-            border-radius: 5px;
-        }
-        p{
-            line-height: 1.5;
-            letter-spacing: 1pt;
-            font-family: serif;
-        }
-        #eduback{
-            text-align: center;
-        }
-        .underline{
-            text-decoration: underline;
-        }
-        section#eduback h2{
-            letter-spacing: 1pt;
-            word-spacing: 5pt;
-            text-transform: uppercase;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -59,11 +36,88 @@
         </section>
         <section id="eduback">
             <header><h2 class="underline">Educational Background</h2></header>
-            <section>
+            <section class="timeline">
                 <!--TIMELINE-->
+                <article class="edu">
+                    <div class="date">
+                        <p>Sept 2020</p>
+                        <p>-</p>
+                        <p>Current</p>
+                    </div>
+                    <div class="body"> 
+                        <header><h4><span class="first-letter" >C</span>omputer <span class="first-letter" >A</span>pplication <span class="first-letter" >D</span>evelopment <br/>(CO-OP)</h4></header>
+                        <p class="clg">Conestoga College, Waterloo, ON</p>
+                        <ul>
+                            <li>Web Applications with .net core and node JS</li>
+                            <li>Software Applications with C# WPF</li>
+                            <li>Mobile Application Development with .NET UNO and React Native</li>
+                            <li>Methodologies like Waterfall and Agile.</li>
+                        </ul>
+                        
+                    </div>
+                    <p class="gpa">GPA: 3.95</p>
+                    <input type="button" onclick="showHide(this)"/>
+                </article>
+
+                <article class="edu">
+                    <div class="date">
+                        <p>Jan 2020</p>
+                        <p>-</p>
+                        <p>Sept 2020</p>
+                    </div>
+                    <div class="body"> 
+                        <header><h4><span class="first-letter" >M</span>obile <span class="first-letter" >A</span>pplication <span class="first-letter" >D</span>evelopment</h4></header>
+                        <p class="clg">Northern College, Timmins, ON</p>
+                        <ul>
+                            <li>Web Development with HTML and JavaScript</li>
+                            <li>Software Development with JAVA</li>
+                            <li> Mobile Application Development with Kotlin and Swift</li>
+                        </ul>
+                        
+                    </div>
+                    <p class="gpa">GPA: 4.00</p>
+                    <input type="button" onclick="showHide(this)"/>
+                </article>
+
+                <article class="edu">
+                    <div class="date">
+                        <p>May 2015</p>
+                        <p>-</p>
+                        <p>June 2018</p>
+                    </div>
+                    <div class="body"> 
+                        <header><h4><span class="first-letter" >B</span>achelor of <span class="first-letter" >C</span>omputer <span class="first-letter" >A</span>pplication </h4></header>
+                        <p class="clg">Ahmedabad University, India</p>
+                        <ul>
+                            <li>Fundamentals of different Programming Languages</li>
+                            <li>Database Management</li>
+                            <li>Software Security</li>
+                            <li>Networking</li>
+                            <li>Data Structures and Slgorithms</li>
+                            <li>System Analysis and Designing</li>
+                        </ul>
+                        
+                    </div>
+                    <p class="gpa">GPA: 3.80</p>
+                    <input type="button" onclick="showHide(this)"/>
+                </article>
             </section>
         </section>
     </main>
     <footer></footer>
+    <script>
+        function showHide(btn){
+            console.log(btn);
+            
+            var ul = btn.parentElement.querySelector(".body").querySelector('ul');
+            $(ul).slideToggle(1000);
+            $(btn).toggleClass("btn-toggle");
+            // if(ul.style.display=="none"){
+            //     ul.style.display="block";
+            // }else{
+            //     ul.style.display="none";
+            // }
+        }
+    </script>
 </body>
 </html>
