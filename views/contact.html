@@ -1,30 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
     <link href="../styles/layout.css" rel="stylesheet" />
-    
-    <title>Smit Shah - Contact</title>
 
+    <title>Smit Shah - Contact</title>
+    <style>
+        main #body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #body>* {
+            flex: 0 0 49%;
+        }
+
+        .field {
+            margin: 10px;
+            width: 80%;
+        }
+
+        .field label {
+            display: block;
+            font-size: 80%;
+        }
+
+        .field input[type="text"],
+        .field input[type="email"],
+        textarea {
+            background: none;
+            color: white;
+            padding: 5px 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .field input[type="submit"],
+        .field input[type="reset"] {
+            background: none;
+            color: white;
+            display: block;
+            float: right;
+            padding: 5px 20px;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .field input[type="submit"] {
+            border: 2px solid green;
+        }
+
+        .field input[type="submit"]:hover {
+            background-color: rgba(0, 128, 0, 0.185);
+            transform: scale(1.1);
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.397);
+        }
+
+        .field input[type="reset"] {
+            border: 2px solid tomato;
+        }
+
+        .field input[type="reset"]:hover {
+            background-color: rgba(255, 99, 71, 0.185);
+            transform: scale(1.1);
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.397);
+        }
+        section#sec2{
+
+            display:flex;
+            justify-content: center;
+        }
+        section img{
+            display:block;
+            /* margin: auto; */
+            animation: imgKeys ease-in 1.5s ;
+            animation-fill-mode: forwards;
+            /* transition: all 1s ease-in; */
+
+            /* transform: skew(-50deg, 10deg); */
+        }
+        @keyframes imgKeys{
+            to {
+                transform:  skewX(-50deg) 
+                            rotateX(50deg) rotateY(10deg) rotateZ(10deg)
+                            scale(1.1)
+                            translate3D( 100px, 100px,100px);
+            }
+            
+        }
+        section img:hover{
+            
+            
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <!-- <h1>Smit Shah</h1> -->
         <h1><span class="first-letter">S</span>mit <span class="first-letter">S</span>hah</h1>
         <nav>
             <a href="../index.html">Home</a>
-            <a  href="about.html">About</a>
+            <a href="about.html">About</a>
             <a href="experience.html">Work Experience</a>
             <a href="projects.html">Projects</a>
             <a id="active" href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        
+        <h2>Contact</h2>
+        <section id="body">
+            <section>
+                <form method="POST">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email ID</label>
+                        <input type="email" id="email" name="email" placeholder="Email ID" />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="6"
+                            placeholder="Type your message here..."></textarea>
+                    </div>
+                    <div class="field">
+                        <input type="submit" value="Send" />
+                        <input type="reset" value="Reset" />
+                    </div>
+                </form>
+            </section>
+            <section id="sec2">
+                <img src="../media/gmail-logo.png" width="300" height="200"/>
+            </section>
+        </section>
     </main>
     <footer></footer>
 </body>
+
 </html>
