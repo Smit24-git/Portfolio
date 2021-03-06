@@ -8,7 +8,71 @@
     <link href="../styles/layout.css" rel="stylesheet" />
     
     <title>Smit Shah - Projects</title>
-
+    <style>
+        main section h2{
+            /* letter-spacing: 1pt; */
+            /* word-spacing: 5pt; */
+            text-transform: uppercase;
+        }
+        .projects{
+            display: grid;
+            grid-template-columns: repeat(4,25%);
+            grid-gap: 20px;
+        }
+        .projects > *{
+            background-color: rgba(255, 255, 255, 0.158);
+            border-radius: 5px;
+            border: 1px solid rgba(245, 245, 245, 0.336);
+            box-shadow: 0px 0px 5px wheat;
+        }
+        .projects > *:hover{
+            transform: scale(1.05);
+        }
+        .projects > .project > h3{
+            margin: 10px auto;
+            text-align: center;
+        }
+        .projects > .project > img{
+            width: 100%;
+            height: 100px;
+        }
+        .projects > .project > .info{
+            margin: 0px 20px ;
+        }
+        .projects > .project > .info p{
+            margin: 0;
+            font-size: 90%;
+            letter-spacing: .5pt;
+        }
+        .projects > .project > ul.skills{
+            list-style-type: none;
+            margin:20px 0;
+            padding: 0;
+        }
+        .projects > .project > ul.skills li{
+            display: inline-block;
+            background-color: green;
+            padding: 5px 10px;
+            margin: 3px 2px;
+            font-size: 80%;
+            border-radius: 5px;
+        }
+        .projects > .project > input[type="button"]{
+            background: none;
+            border: 1px solid black;
+            outline: none;
+            color: white;
+            background-color: rgba(245, 245, 245, 0.164);
+            text-align: center;
+            width: 80%;
+            display: block;
+            margin: 5px auto;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,7 +87,54 @@
         </nav>
     </header>
     <main>
-        
+        <section>
+            <h2>Web Development</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Covid-19 Website</h3>
+                    <img src="../media/projects/web/covid/covid-proj.PNG" />
+                    <div class="info">
+                        <p>Provides Information related to COVID-19.</p>
+                    </div>
+                    <ul class="skills">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JS</li>
+                        <li>JQuery</li>
+                        <li>API calls</li>
+                    </ul>
+                    <input type="button" value="View Full Details"/>
+                </div>
+                <div class="project">
+                    <h3>Car Rental</h3>
+                    <img src="../media/projects/web/car-rental/carsworld-proj.PNG" />
+                    <div class="info">
+                        <p>Provides online car renting service.</p>
+                    </div>
+                    <ul class="skills">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JS</li>
+                        <li>JQuery</li>
+                        <li>Animation</li>
+                    </ul>
+                    <input type="button" value="View Full Details"/>
+                </div>
+                
+            </div>
+        </section>
+        <!-- <section>
+            <h2>Software Development</h2>
+        </section>
+        <section>
+            <h2>Application Development</h2>
+        </section>
+        <section>
+            <h2>Game Development</h2>
+        </section>
+        <section>
+            <h2>3D Models</h2>
+        </section> -->
     </main>
     <footer></footer>
 </body>
