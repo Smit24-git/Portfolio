@@ -157,9 +157,9 @@
                 emailjs.sendForm($('#service_id').val(), $('#template_id').val() , '#form')
                     .then(function (response) {
                         console.log('SUCCESS!', response.status, response.text);
-                        alert("Message Sent.")
+                        alert("Message Sent.");
                     }, function (error) {
-                        console.log('Please try again later...', error);
+                        alert('Please try again later...');
                     });
             }
             $("form").on("submit", () => {
