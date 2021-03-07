@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
     <link href="../styles/layout.css" rel="stylesheet" />
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
     <title>Smit Shah - Contact</title>
     <style>
@@ -37,6 +40,7 @@
             padding: 5px 10px;
             width: 100%;
             font-size: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.438);
         }
 
         .field input[type="submit"],
@@ -71,32 +75,28 @@
             transform: scale(1.1);
             box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.397);
         }
-        section#sec2{
 
-            display:flex;
+        section#sec2 {
+
+            display: flex;
             justify-content: center;
         }
-        section img{
-            display:block;
+
+        section img {
+            display: block;
             /* margin: auto; */
-            animation: imgKeys ease-in 1.5s ;
+            animation: imgKeys ease-in 1.5s;
             animation-fill-mode: forwards;
             /* transition: all 1s ease-in; */
 
             /* transform: skew(-50deg, 10deg); */
         }
-        @keyframes imgKeys{
+
+        @keyframes imgKeys {
             to {
-                transform:  skewX(-50deg) 
-                            rotateX(50deg) rotateY(10deg) rotateZ(10deg)
-                            scale(1.1)
-                            translate3D( 100px, 100px,100px);
+                transform: skewX(-50deg) rotateX(50deg) rotateY(10deg) rotateZ(10deg) scale(1.1) translate3D(100px, 100px, 100px);
             }
-            
-        }
-        section img:hover{
-            
-            
+
         }
     </style>
 </head>
@@ -117,18 +117,23 @@
         <h2>Contact</h2>
         <section id="body">
             <section>
-                <form method="POST">
+                <form method="POST" id="form">
+                    <input type="hidden" id="user_id" value="user_EKOSC4xd7Ojz1f8P9CKai"/>
+                    <input type="hidden" id="service_id" value="service_9khukql"/>
+                    <input type="hidden" id="template_id" value="template_cdlj1vu"/>
                     <div class="field">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Name" />
+                        <label for="name" >Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required/>
                     </div>
                     <div class="field">
                         <label for="email">Email ID</label>
-                        <input type="email" id="email" name="email" placeholder="Email ID" />
+                        <input type="email" id="email" name="email" placeholder="Email ID" required
+                            pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"/>
                     </div>
                     <div class="field">
                         <label for="message">Message</label>
                         <textarea name="message" id="message" rows="6"
+                            required
                             placeholder="Type your message here..."></textarea>
                     </div>
                     <div class="field">
@@ -138,11 +143,31 @@
                 </form>
             </section>
             <section id="sec2">
-                <img src="../media/gmail-logo.png" width="300" height="200"/>
+                <img src="../media/gmail-logo.png" width="300" height="200" />
             </section>
         </section>
     </main>
     <footer></footer>
+    <script>
+        $(document).ready(() => {
+            emailjs.init($("#user_id").val());
+            function sendEmail() {
+                
+                // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                emailjs.sendForm($('#service_id').val(), $('#template_id').val() , '#form')
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert("Message Sent.")
+                    }, function (error) {
+                        console.log('Please try again later...', error);
+                    });
+            }
+            $("form").on("submit", () => {
+                sendEmail();
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>
