@@ -61,3 +61,7 @@ body > header h1{
     /* color: rgba(22, 6, 6, 0.747); */
     margin-bottom: 0;
 }
+.project a{
+    color: rgba(137, 137, 243, 0.993);
+    /* text-decoration: none; */
+}
